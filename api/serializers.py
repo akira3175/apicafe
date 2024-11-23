@@ -2,6 +2,10 @@ from rest_framework import serializers
 from .models import NhaCungCap
 import re
 
+"""
+    NHÀ CUNG CẤP
+"""
+
 class NhaCungCapSerializer(serializers.ModelSerializer):
     class Meta:
         model = NhaCungCap
@@ -27,3 +31,8 @@ class NhaCungCapSerializer(serializers.ModelSerializer):
         if not value.strip():
             raise serializers.ValidationError("Fax không được để trống.")
         return value
+    
+
+"""
+    M VIẾT VÀO ĐÂY NÀY
+"""

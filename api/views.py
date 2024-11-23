@@ -3,6 +3,12 @@ from rest_framework.response import Response
 from .models import NhaCungCap
 from .serializers import NhaCungCapSerializer
 
+"""
+
+    NHÀ CUNG CẤP
+
+"""
+
 # View để lấy danh sách và thêm nhà cung cấp
 class NhaCungCapCreateView(generics.CreateAPIView):
     queryset = NhaCungCap.objects.all()
@@ -43,3 +49,7 @@ class NhaCungCapDeleteView(generics.DestroyAPIView):
         instance = self.get_object()
         instance.delete()
         return Response({"message": "Xóa thành công!"}, status=status.HTTP_204_NO_CONTENT)
+
+"""
+    M VIẾT VÀO ĐÂY NÀY
+"""
